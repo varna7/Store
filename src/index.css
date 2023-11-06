@@ -5,9 +5,84 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  height: 100vh;
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+#root{
+  height: 100%;
+}
+.App{
+  display: flex;
+  height: 100%;
+  background-color: #bee9e8;
+}
+.sidebar{
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  padding: 3rem;
+  padding-top: 7rem;
+  gap: 10px;
+  background-color:#1b4965 ;
+}
+.content{
+  flex: 5;
+  
+  background-color: white;
+  margin: 6rem;
+  box-shadow: rgba(54, 95, 129, 0.2) 0px 7px 29px 0px;
+  border-radius: 2rem;
+}
+.main{
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 2rem;
+}
+a{
+  text-decoration: none;
+  color: white;
+  display: flex;
+  gap: 1rem;
+}
+h2{
+  color: #5fa8d3;
+  display: flex;
+  
+  justify-content: center;
+}
+button{
+  background-color:#1b4965 ;
+  border: none;
+  border-radius: 5px;
+  color:white;
+  
+  width: 6rem;
+  padding: 2px;
+}
+form{
+  
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 2rem;
+  width: 75%;
+}
+table{
+  width: 100%;
+}
+input,select{
+  border: none;
+  padding: .5rem;
+  border-bottom: 1px solid grey;
+  width: 80%;
+}
+
