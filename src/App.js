@@ -26,6 +26,7 @@ function App() {
         <div className="content">
           <Routes>
           <Route path="/" element={<AddProduct onAdd={addProduct} />} />
+          <Route path="/Store" element={<AddProduct onAdd={addProduct} />} />
           <Route path="/buy-product" element={<BuyProduct products={products}/>} />
           </Routes>
         </div>
