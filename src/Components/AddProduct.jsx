@@ -1,50 +1,65 @@
-import React, { useState } from 'react';
+import React, { useState } from "react";
 
-const AddProduct = () => {
+const AddProduct = (props) => {
   const [product, setProduct] = useState({
-    name: '',
-    price: '',
-    quantity: '',
+    name: "",
+    price: "",
+    quantity: "",
   });
 
   const handleInputChange = (e) => {
-    setProduct({
-      ...product,
-      [e.target.name]: e.target.value,
+    const { name, value } = e.target;
+
+    setProduct((product) => {
+      return {
+        ...product,
+        [name]: value,
+      };
     });
-  }
+  };
 
   const handleSubmit = (e) => {
+    props.onAdd(product); // Call the addProduct function from the parent component
+    setProduct({
+      name: "",
+      price: "",
+      quantity: "",
+    });
     e.preventDefault();
-    
-  }
+  };
 
   return (
-    <div className='main'>
-      <h2>Add Product</h2>
+    <div className="main">
       <form onSubmit={handleSubmit}>
-        <table>
-          <tr>
-            <td><label>Name</label></td>
-            <td>:</td>
-            <td><input type="text" name="name" value={product.name} onChange={handleInputChange} /></td>
-          </tr>
-          <tr>
-            <td><label>Price</label></td>
-            <td>:</td>
-            <td><input type="text" name="price" value={product.price} onChange={handleInputChange} /></td>
-          </tr>
-          <tr>
-            <td><label>Quantity</label></td>
-            <td>:</td>
-            <td><input type="text" name="quantity" value={product.quantity} onChange={handleInputChange} /></td>
-          </tr>
-        </table>
-        
+        <h2>Add Product</h2>
+
+        <div className="inputs" >
+          <input
+            type="text"
+            name="name"
+            value={product.name}
+            onChange={handleInputChange}
+            placeholder=" Product Name"
+          />
+          <input
+            type="text"
+            name="price"
+            value={product.price}
+            onChange={handleInputChange}
+            placeholder="  Price"
+          />
+          <input
+            type="text"
+            name="quantity"
+            value={product.quantity}
+            onChange={handleInputChange}
+            placeholder="  Quantity"
+          />
+        </div>
         <button type="submit">Add </button>
       </form>
     </div>
   );
-}
+};
 
 export default AddProduct;

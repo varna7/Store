@@ -18,7 +18,7 @@ code {
 .App{
   display: flex;
   height: 100%;
-  background-color: #bee9e8;
+  background-color: #f4f4f9;
 }
 .sidebar{
   display: flex;
@@ -27,7 +27,8 @@ code {
   padding: 3rem;
   padding-top: 7rem;
   gap: 10px;
-  background-color:#1b4965 ;
+  background-color:#2f4550;
+  box-shadow: rgba(54, 95, 129, 0.2) 0px 7px 29px 0px;
 }
 .content{
   flex: 5;
@@ -43,19 +44,38 @@ code {
   display: flex;
   align-items: center;
   justify-content: center;
-  flex-direction: column;
+  flex-direction: ;
   gap: 2rem;
 }
+.products{
+  flex: 1;
+  border-right: 1px solid lightgray;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  align-items: center;
+  height: 70%;
+  padding: 3rem;
+}
+.product-table{
+  border: 1px solid lightgrey;
+  padding: .5rem;
+  text-align: left;
+  font-family: 'Poppins', sans-serif;
+  font-size: small;
+}
+
 a{
   text-decoration: none;
   color: white;
   display: flex;
   gap: 1rem;
+  font-family: 'Poppins', sans-serif;
 }
 h2{
-  color: #5fa8d3;
+  color: #586f7c;
   display: flex;
-  
+  font-family: 'Poppins', sans-serif;
   justify-content: center;
 }
 button{
@@ -68,16 +88,24 @@ button{
   padding: 2px;
 }
 form{
-  
+  flex: 1;
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
   gap: 2rem;
   width: 75%;
+  font-family: 'Poppins', sans-serif;
 }
 table{
   width: 100%;
+}
+.inputs{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  width: 60%;
 }
 input,select{
   border: none;
@@ -85,4 +113,12 @@ input,select{
   border-bottom: 1px solid grey;
   width: 80%;
 }
-
+.disabled{
+  color: lightgray;
+}
+.error-message{
+  color: red;
+}
+.success-message{
+  color: green;
+}
